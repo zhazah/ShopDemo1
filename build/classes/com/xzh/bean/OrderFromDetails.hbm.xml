@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-3-8 9:42:07 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xzh.bean.OrderFromDetails" table="ORDERFROMDETAILS">
+        <id name="ofd_id" type="int">
+            <column name="OFD_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orderFrom" class="com.xzh.bean.OrderFrom" fetch="join">
+            <column name="ORDERFROM" />
+        </many-to-one>
+        <many-to-one name="commodityDetails" class="com.xzh.bean.CommodityDetails" fetch="join">
+            <column name="COMMODITYDETAILS" />
+        </many-to-one>
+        <many-to-one name="goodsDetail" class="com.xzh.bean.GoodsDetail" fetch="join">
+            <column name="GOODSDETAIL" />
+        </many-to-one>
+        <property name="ofd_univalence" type="java.lang.String">
+            <column name="OFD_UNIVALENCE" />
+        </property>
+        <property name="ofd_number" type="int">
+            <column name="OFD_NUMBER" />
+        </property>
+    </class>
+</hibernate-mapping>

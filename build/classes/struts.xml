@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="ShopDemo1" namespace="/"  extends="json-default">
+		<action name="shopping_*" class="shoppingAction" method="{1}">
+		 		<result name="input">/login.jsp</result>
+		 		<result name="success" type="redirectAction">shopping_findAll.action</result> 
+		 		<result name="registerSuccess">/login.jsp</result>
+		 		<result name="findAll">/index.jsp</result> 
+		 		<result name="findById">/single.jsp</result>
+		 		<result name="findShopId">/checkout.jsp</result>
+		 		<result name="findProduct">/product.jsp</result> 
+		 		<result name="findShopPriceOne">/product.jsp</result> 
+		 		<result name="findShopPriceOneAndTwo">/product.jsp</result>
+		 		<result name="findShopPriceTwoAndThree">/product.jsp</result>
+		 		<result name="findShopPriceThree">/product.jsp</result>
+		 		<result name="findShopSexMen">/product.jsp</result>
+		 		<result name="findShopSexWoMen">/product.jsp</result>
+		</action>
+	</package>
+	<package name="register" namespace="/"  extends="json-default">
+		<action name="registerUser" class="register" method="register">
+			<result name="success" type="json">
+				<param name="root">mapState</param>
+			</result>
+		</action>
+	</package>
+
+
+</struts> 

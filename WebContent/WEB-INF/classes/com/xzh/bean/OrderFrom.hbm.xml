@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-3-8 9:42:07 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xzh.bean.OrderFrom" table="ORDERFROM">
+        <id name="of_id" type="int">
+            <column name="OF_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="com.xzh.bean.User" fetch="join">
+            <column name="USER" />
+        </many-to-one>
+        <property name="of_datatime" type="java.lang.String">
+            <column name="OF_DATATIME" />
+        </property>
+        <property name="of_address" type="java.lang.String">
+            <column name="OF_ADDRESS" />
+        </property>
+        <property name="of_totalMoney" type="java.lang.String">
+            <column name="OF_TOTALMONEY" />
+        </property>
+        <property name="of_state" type="java.lang.String">
+            <column name="OF_STATE" />
+        </property>
+        <property name="of_expressageWay" type="java.lang.String">
+            <column name="OF_EXPRESSAGEWAY" />
+        </property>
+        <property name="of_payWay" type="java.lang.String">
+            <column name="OF_PAYWAY" />
+        </property>
+    </class>
+</hibernate-mapping>

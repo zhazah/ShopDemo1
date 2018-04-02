@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-3-9 20:31:31 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xzh.bean.CommodityDetails" table="COMMODITYDETAILS">
+        <id name="cd_id" type="int">
+            <column name="CD_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="cd_name" type="java.lang.String">
+            <column name="CD_NAME" />
+        </property>
+        <property name="cd_img" type="java.lang.String">
+            <column name="CD_IMG" />
+        </property>
+        <property name="cd_describe" type="java.lang.String">
+            <column name="CD_DESCRIBE" />
+        </property>
+        <property name="cd_priceTier" type="java.lang.String">
+            <column name="CD_PRICETIER" />
+        </property>
+        <property name="cd_gross" type="int">
+            <column name="CD_GROSS" />
+        </property>
+        <property name="cd_gaishu" type="java.lang.String">
+            <column name="CD_GAISHU" />
+        </property>
+        <property name="cd_free" type="java.lang.String">
+            <column name="CD_FREE" />
+        </property>
+         <property name="cd_sex" type="java.lang.String">
+            <column name="CD_SEX" />
+        </property>
+    </class>
+</hibernate-mapping>

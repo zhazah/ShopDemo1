@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-3-8 9:42:07 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xzh.bean.ShoppingCart" table="SHOPPINGCART">
+        <id name="sc_id" type="int">
+            <column name="SC_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="commodityDetails" class="com.xzh.bean.CommodityDetails" fetch="join">
+            <column name="COMMODITYDETAILS" />
+        </many-to-one>
+        <property name="sc_count" type="int">
+            <column name="SC_COUNT" />
+        </property>
+        <many-to-one name="goodsDetail" class="com.xzh.bean.GoodsDetail" fetch="join">
+            <column name="GOODSDETAIL" />
+        </many-to-one>
+        <many-to-one name="user" class="com.xzh.bean.User" fetch="join">
+            <column name="USER" />
+        </many-to-one>
+        <property name="sc_sessionid" type="int">
+            <column name="SC_SESSIONID" />
+        </property>
+        <property name="sc_datatime" type="java.lang.String">
+            <column name="SC_DATATIME" />
+        </property>
+    </class>
+</hibernate-mapping>
